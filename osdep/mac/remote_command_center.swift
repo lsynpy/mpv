@@ -156,7 +156,7 @@ class RemoteCommandCenter: EventSubscriber {
         let cover = cover ?? coverThumb ?? defaultCover
         infoCenter.playbackState = isPaused ? .paused : .playing
         infoCenter.nowPlayingInfo = (infoCenter.nowPlayingInfo ?? [:]).merging([
-            MPNowPlayingInfoPropertyMediaType: NSNumber(value: MPNowPlayingInfoMediaType.video.rawValue),
+            MPNowPlayingInfoPropertyMediaType: NSNumber(value: MPNowPlayingInfoMediaType.audio.rawValue),
             MPNowPlayingInfoPropertyPlaybackProgress: NSNumber(value: 0.0),
             MPNowPlayingInfoPropertyPlaybackRate: NSNumber(value: isPaused ? 0 : rate),
             MPNowPlayingInfoPropertyElapsedPlaybackTime: NSNumber(value: position),
